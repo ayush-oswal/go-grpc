@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/ayush-oswal/go-grpc/grpc-server/chat";
+
+message Message{
+    string message = 1;
+}
+
+service ChatService {
+    rpc SayHello(Message) returns (Message);
+}
